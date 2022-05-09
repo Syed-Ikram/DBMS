@@ -1,0 +1,1 @@
+SELECT count(DISTINCT FID) FROM rental INNER JOIN inventory ON rental.inventory_id = inventory.inventory_id INNER JOIN store ON inventory.store_id = store.store_id INNER JOIN film_list ON film_list.FID = inventory.film_id WHERE store.manager_staff_id = (SELECT ID from staff_list WHERE name="Jon Stephens") AND film_list.category="SCI-FI";

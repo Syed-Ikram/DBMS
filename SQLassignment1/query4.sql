@@ -1,0 +1,2 @@
+SELECT DISTINCT customer_list.ID, customer_list.name FROM customer_list INNER JOIN rental on rental.customer_id = customer_list.ID INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id INNER JOIN film_actor ON inventory.film_id = film_actor.film_id INNER JOIN actor_info ON film_actor.actor_id = actor_info.actor_id
+WHERE actor_info.first_name = "NICK" AND actor_info.last_name = "WAHLBERG" AND customer_list.country = "Canada";

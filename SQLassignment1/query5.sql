@@ -1,0 +1,2 @@
+SELECT count(*) as Number_of_movies FROM (SELECT film_actor.* FROM film_actor INNER JOIN actor_info ON film_actor.actor_id = actor_info.actor_id
+WHERE actor_info.first_name = "SEAN" AND actor_info.last_name = "WILLIAMS") as film_by_actor INNER JOIN film ON film.film_id = film_by_actor.film_id;

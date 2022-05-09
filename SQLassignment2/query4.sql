@@ -1,0 +1,1 @@
+SELECT film_list.category FROM rental INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id INNER JOIN film_list ON film_list.FID = inventory.film_id WHERE store_id = (SELECT SID from customer_list WHERE customer_list.name = "PATRICIA JOHNSON") GROUP BY film_list.category LIMIT 3;

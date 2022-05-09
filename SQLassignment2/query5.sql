@@ -1,0 +1,1 @@
+SELECT count(DISTINCT film_list.title) FROM rental INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id INNER JOIN film_list ON film_list.FID = inventory.film_id WHERE store_id = (SELECT SID from customer_list WHERE customer_list.name = "SUSAN WILSON") AND film_list.rating = 'R';
